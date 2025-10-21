@@ -6,7 +6,7 @@ public class Toque {
 	public static int pontoAtivo = -1;
 	public static float ultimoX = 0, ultimoY = 0;
 
-	public static boolean cameraOlhar(Cena3D.Camera3D camera, MotionEvent e) {
+	public static boolean cameraOlhar(Ambiente3D.Camera3D camera, MotionEvent e) {
 		int acao = e.getActionMasked();
 		int total = e.getPointerCount();
 

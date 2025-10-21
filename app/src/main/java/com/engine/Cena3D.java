@@ -17,9 +17,6 @@ public class Cena3D {
 	public float[] matrizV;
 	public float[] matrizProj;
 	public float[] matrizTemp;
-
-	public FloatBuffer bufferVertices;
-	public ShortBuffer bufferIndices;
 	
 	public void iniciar() {
 		iniciar(GL.obterVert3D(), GL.obterFrag3D());
@@ -34,9 +31,6 @@ public class Cena3D {
 		programa = GL.criarPrograma(sv, sf);
 		locMVP = GLES30.glGetUniformLocation(programa, "uMVP");
 		locTextura = GLES30.glGetUniformLocation(programa, "uTextura");
-
-		bufferVertices = GL.criarFloatBuffer(1000);
-		bufferIndices = GL.criarShortBuffer(1500);
 
 		Matrix.setIdentityM(matrizV, 0);
 		Matrix.setIdentityM(matrizProj, 0);
